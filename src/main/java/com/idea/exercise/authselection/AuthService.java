@@ -1,6 +1,7 @@
 package com.idea.exercise.authselection;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -19,7 +20,7 @@ import org.springframework.util.CollectionUtils;
 @Component
 public class AuthService implements IAuthService {
 
-  private Map<Long, Long> AUTH_MAP = new ConcurrentHashMap<Long, Long>();
+  private Map<Long, Long> AUTH_MAP = new HashMap<>();
 
   /**
    * 添加用户权限
