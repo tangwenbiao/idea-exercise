@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @description: 性能测试基础类
  * @date：2019/10/15 15:58
  */
-public class CapabilityBaseExecutor {
+public class ConcurrentExecutor {
 
     /**
      * 趋势测试

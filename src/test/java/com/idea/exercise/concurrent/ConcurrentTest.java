@@ -2,7 +2,7 @@ package com.idea.exercise.concurrent;
 
 
 import com.idea.exercise.multiplethread.AbstractEventHandler;
-import com.idea.exercise.multiplethread.CapabilityBaseExecutor;
+import com.idea.exercise.multiplethread.ConcurrentExecutor;
 import com.idea.exercise.multiplethread.concurrent.EventFuture;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +18,7 @@ public class ConcurrentTest {
 
     @Test
     public void testConcurrent() {
-        CapabilityBaseExecutor executor = new CapabilityBaseExecutor();
+        ConcurrentExecutor executor = new ConcurrentExecutor();
         EventFuture future;
         try {
             future = executor.simpleTrendTest(10, 200, new TestHandler());

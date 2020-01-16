@@ -10,11 +10,10 @@ import org.springframework.context.annotation.ComponentScan;
  * @date：2020/1/16 17:28
  */
 @SpringBootApplication
-@ComponentScan({"com.idea.exercise.authselection"})
 public class AuthTestApplication {
 
-  public static void main(String[] args) {
-    SpringApplication.run(AuthTestApplication.class);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(AuthTestApplication.class);
+    }
 
 }
