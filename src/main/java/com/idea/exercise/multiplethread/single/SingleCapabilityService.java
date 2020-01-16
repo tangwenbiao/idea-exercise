@@ -1,7 +1,7 @@
 package com.idea.exercise.multiplethread.single;
 
-import com.idea.exercise.multiplethread.CapabilityBaseService;
-import com.idea.exercise.multiplethread.IBusinessService;
+import com.idea.exercise.multiplethread.CapabilityBaseExecutor;
+import com.idea.exercise.multiplethread.AbstractEventHandler;
 
 /**
  * @author: TangFenQi
@@ -10,9 +10,9 @@ import com.idea.exercise.multiplethread.IBusinessService;
  */
 public class SingleCapabilityService {
 
-  private CapabilityBaseService baseService = new CapabilityBaseService();
+  private CapabilityBaseExecutor baseService = new CapabilityBaseExecutor();
 
-  public void capabilityTest(IBusinessService businessService) throws InterruptedException {
+  public void capabilityTest(AbstractEventHandler businessService) throws InterruptedException {
     baseService.simpleTrendTest(1,1,businessService);
   }
 

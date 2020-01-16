@@ -1,6 +1,6 @@
 package com.idea.exercise.multiplethread.concurrent;
-import com.idea.exercise.multiplethread.CapabilityBaseService;
-import com.idea.exercise.multiplethread.IBusinessService;
+import com.idea.exercise.multiplethread.CapabilityBaseExecutor;
+import com.idea.exercise.multiplethread.AbstractEventHandler;
 
 /**
  * @author: TangFenQi
@@ -9,7 +9,7 @@ import com.idea.exercise.multiplethread.IBusinessService;
  */
 public class ConcurrentCapabilityService {
 
-  private CapabilityBaseService baseService = new CapabilityBaseService();
+  private CapabilityBaseExecutor executor = new CapabilityBaseExecutor();
 
   /**
    * 趋势测试
@@ -18,13 +18,13 @@ public class ConcurrentCapabilityService {
    *
    * @param amount 测试条数
    */
-  public void simpleTrendTest(Integer amount, IBusinessService businessService)
+  public void simpleTrendTest(Integer amount, AbstractEventHandler eventHandler)
       throws InterruptedException {
     //设置线程数
     Integer concurrenceAmount = Runtime.getRuntime().availableProcessors() * 2;
     //每个线程需要执行的次数
     Integer everyAmount = amount / concurrenceAmount;
-    baseService.simpleTrendTest(concurrenceAmount, everyAmount, businessService);
+    executor.simpleTrendTest(concurrenceAmount, everyAmount, eventHandler);
   }
 
 }
